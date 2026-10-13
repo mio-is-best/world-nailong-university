@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>世界奶龙大学 | World Nailong University</title>
+<meta name="description" content="世界奶龙大学（World Nailong University）官方页面 —— 奶龙正在护送你进入世界奶龙大学。">
+<meta name="keywords" content="世界奶龙大学,奶龙大学,奶龙,World Nailong University,Nailong">
+<meta property="og:title" content="世界奶龙大学 | World Nailong University">
+<meta property="og:description" content="奶龙正在护送你进入世界奶龙大学。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="logo.svg">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Noto Serif SC", serif;
+    background: radial-gradient(ellipse at 50% 35%, #fdfbf4 0%, #f2ecd9 60%, #e8dfc4 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+  }
+  .stage {
+    position: relative;
+    width: min(64vmin, 480px);
+    height: min(64vmin, 480px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* 背后的大学校徽 */
+  .crest {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .92;
+    filter: drop-shadow(0 6px 18px rgba(26,58,107,.18));
+  }
+  /* 中间的奶龙 */
+  .nailong {
+    position: relative;
+    width: 62%;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 10px 16px rgba(0,0,0,.16));
+    z-index: 2;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+  }
+  h1 {
+    margin-top: 34px;
+    font-size: clamp(22px, 4.6vw, 34px);
+    color: #1a3a6b;
+    letter-spacing: .18em;
+    font-weight: 700;
+  }
+  h1 .dots::after {
+    content: "";
+    animation: dots 1.5s steps(4, end) infinite;
+  }
+  @keyframes dots {
+    0% { content: ""; }
+    25% { content: "·"; }
+    50% { content: "··"; }
+    75% { content: "···"; }
+  }
+  .sub {
+    margin-top: 14px;
+    font-size: clamp(12px, 2.2vw, 15px);
+    color: #8a7f5c;
+    letter-spacing: .3em;
+  }
+  .bar {
+    margin-top: 30px;
+    width: min(46vmin, 300px);
+    height: 6px;
+    border-radius: 999px;
+    background: #e3dabd;
+    overflow: hidden;
+  }
+  .bar i {
+    display: block;
+    height: 100%;
+    width: 40%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #f6c344, #1a3a6b);
+    animation: slide 1.6s ease-in-out infinite;
+  }
+  @keyframes slide {
+    0% { transform: translateX(-110%); }
+    100% { transform: translateX(320%); }
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <img class="crest" src="logo.svg" alt="世界奶龙大学校徽">
+    <img class="nailong" src="nailong.png" alt="奶龙">
+  </div>
+  <h1>正在进入世界奶龙大学<span class="dots"></span></h1>
+  <p class="sub">WORLD NAILONG UNIVERSITY · EST. 2026</p>
+  <div class="bar"><i></i></div>
+</body>
+</html>

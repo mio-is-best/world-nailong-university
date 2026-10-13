@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <path id="arcTop" d="M 400 400 m -300 0 a 300 300 0 1 1 600 0"/>
+    <path id="arcBottom" d="M 400 400 m -300 0 a 300 300 0 1 0 600 0"/>
+  </defs>
+
+  <!-- 外圈双环 -->
+  <circle cx="400" cy="400" r="380" fill="none" stroke="#1a3a6b" stroke-width="10"/>
+  <circle cx="400" cy="400" r="352" fill="none" stroke="#1a3a6b" stroke-width="3"/>
+
+  <!-- 环形校名（上弧中文） -->
+  <text font-family="STZhongsong, SimSun, 'Noto Serif SC', serif" font-size="76" font-weight="bold" fill="#1a3a6b" letter-spacing="14">
+    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">世 界 奶 龙 大 学</textPath>
+  </text>
+
+  <!-- 环形英文名（下弧） -->
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#1a3a6b" letter-spacing="6">
+    <textPath href="#arcBottom" startOffset="50%" text-anchor="middle">WORLD NAILONG UNIVERSITY</textPath>
+  </text>
+
+  <!-- 两侧五角星分隔 -->
+  <g fill="#1a3a6b">
+    <path d="M 400 96 l 7.4 15.2 16.8 2.4 -12.1 11.8 2.9 16.7 -15 -7.9 -15 7.9 2.9 -16.7 -12.1 -11.8 16.8 -2.4 Z" transform="rotate(-90 400 122)"/>
+    <path d="M 400 704 l 7.4 15.2 16.8 2.4 -12.1 11.8 2.9 16.7 -15 -7.9 -15 7.9 2.9 -16.7 -12.1 -11.8 16.8 -2.4 Z" transform="rotate(90 400 728)"/>
+  </g>
+
+  <!-- 中心图案：打开的书 + 星 + 月桂 -->
+  <g stroke="#1a3a6b" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 打开的书 -->
+    <path d="M 235 520 Q 320 480 400 515 Q 480 480 565 520 L 565 470 Q 480 430 400 465 Q 320 430 235 470 Z" fill="#1a3a6b"/>
+    <path d="M 400 515 L 400 465" stroke="#ffffff" stroke-width="7"/>
+    <!-- 月桂（左右各一支） -->
+    <path d="M 220 560 Q 200 470 250 400" stroke-width="7"/>
+    <path d="M 580 560 Q 600 470 550 400" stroke-width="7"/>
+    <g stroke-width="6">
+      <path d="M 218 528 Q 196 522 190 500 Q 214 502 224 520" />
+      <path d="M 214 484 Q 194 472 194 450 Q 216 458 220 478" />
+      <path d="M 222 442 Q 206 426 210 404 Q 230 416 228 438" />
+      <path d="M 238 408 Q 228 388 236 368 Q 252 384 244 404" />
+      <path d="M 582 528 Q 604 522 610 500 Q 586 502 576 520" />
+      <path d="M 586 484 Q 606 472 606 450 Q 584 458 580 478" />
+      <path d="M 578 442 Q 594 426 590 404 Q 570 416 572 438" />
+      <path d="M 562 408 Q 572 388 564 368 Q 548 384 556 404" />
+    </g>
+    <!-- 书上方：小奶龙剪影（圆头 + 小角） -->
+    <circle cx="400" cy="320" r="78" stroke-width="9" fill="#1a3a6b" stroke="none"/>
+    <path d="M 352 262 L 340 230 L 368 248 Z" fill="#1a3a6b"/>
+    <path d="M 448 262 L 460 230 L 432 248 Z" fill="#1a3a6b"/>
+    <!-- 龙的眼睛（白） -->
+    <circle cx="372" cy="312" r="9" fill="#ffffff"/>
+    <circle cx="428" cy="312" r="9" fill="#ffffff"/>
+    <!-- 龙的肚子弧线 -->
+    <path d="M 348 366 Q 400 396 452 366" stroke="#ffffff" stroke-width="7" fill="none"/>
+  </g>
+
+  <!-- 建校年份 -->
+  <text x="400" y="618" font-family="Georgia, serif" font-size="44" font-weight="bold" fill="#1a3a6b" text-anchor="middle" letter-spacing="4">2026</text>
+</svg>

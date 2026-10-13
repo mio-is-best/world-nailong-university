@@ -96,6 +96,21 @@
     0% { transform: translateX(-110%); }
     100% { transform: translateX(320%); }
   }
+  .go {
+    margin-top: 22px;
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background: #1a3a6b;
+    border-radius: 999px;
+    text-decoration: none;
+    letter-spacing: .12em;
+    box-shadow: 0 4px 0 #12284a;
+  }
+  .go:active { transform: translateY(3px); box-shadow: 0 1px 0 #12284a; }
+  .tip { margin-top: 16px; font-size: 13px; color: #a3987a; }
 </style>
 </head>
 <body>
@@ -106,5 +121,21 @@
   <h1>正在进入世界奶龙大学<span class="dots"></span></h1>
   <p class="sub">WORLD NAILONG UNIVERSITY · EST. 2026</p>
   <div class="bar"><i></i></div>
+  <a class="go" id="gobtn" href="http://www.djtu.edu.cn/">立即进入校门</a>
+  <p class="tip"><span id="sec">5</span> 秒后自动报到…</p>
+
+<script>
+  var sec = 5;
+  var el = document.getElementById('sec');
+  var timer = setInterval(function () {
+    sec--;
+    if (sec <= 0) {
+      clearInterval(timer);
+      window.location.href = 'http://www.djtu.edu.cn/';
+    } else {
+      el.textContent = sec;
+    }
+  }, 1000);
+</script>
 </body>
 </html>

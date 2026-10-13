@@ -111,6 +111,36 @@
   }
   .go:active { transform: translateY(3px); box-shadow: 0 1px 0 #12284a; }
   .tip { margin-top: 16px; font-size: 13px; color: #a3987a; }
+  .game-entry {
+    position: fixed;
+    left: 22px;
+    bottom: 22px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px 10px 12px;
+    background: #fffdf5;
+    border: 2px solid #f6c344;
+    border-radius: 999px;
+    text-decoration: none;
+    color: #5a4300;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(140,100,0,.2);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .game-entry:hover { transform: translateY(-3px); box-shadow: 0 8px 18px rgba(140,100,0,.28); }
+  .game-entry .ico {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f6c344, #ffb300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
 </style>
 </head>
 <body>
@@ -123,6 +153,10 @@
   <div class="bar"><i></i></div>
   <a class="go" id="gobtn" href="http://www.djtu.edu.cn/">立即进入校门</a>
   <p class="tip"><span id="sec">5</span> 秒后自动报到…</p>
+
+  <a class="game-entry" href="https://mio-is-best.github.io/games/" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+    <span class="ico">🎮</span>游玩我的小游戏
+  </a>
 
 <script>
   var sec = 5;

@@ -146,7 +146,7 @@
 <body>
   <div class="stage">
     <img class="crest" src="logo.svg" alt="世界奶龙大学校徽">
-    <img class="nailong" src="nailong.png" alt="奶龙">
+    <img class="nailong" id="nl" src="nailong.png" alt="奶龙">
   </div>
   <h1>正在进入世界奶龙大学<span class="dots"></span></h1>
   <p class="sub">WORLD NAILONG UNIVERSITY · EST. 2026</p>
@@ -159,6 +159,10 @@
   </a>
 
 <script>
+  // 随机奶龙：原图 + 4 张新图
+  var pics = ['nailong.png', 'nailong1.png', 'nailong2.png', 'nailong3.png', 'nailong4.png'];
+  document.getElementById('nl').src = pics[Math.floor(Math.random() * pics.length)];
+
   var sec = 5;
   var el = document.getElementById('sec');
   var timer = setInterval(function () {

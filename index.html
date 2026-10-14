@@ -11,6 +11,12 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="logo.svg">
 <link rel="icon" type="image/svg+xml" href="logo.svg">
+<!-- 预加载全部 5 张奶龙图：首访冷 CDN 时并行下载，随机图必在 5 秒跳转前就绪 -->
+<link rel="preload" as="image" href="nailong.png">
+<link rel="preload" as="image" href="nailong1.png">
+<link rel="preload" as="image" href="nailong2.png">
+<link rel="preload" as="image" href="nailong3.png">
+<link rel="preload" as="image" href="nailong4.png">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { height: 100%; }
@@ -146,7 +152,12 @@
 <body>
   <div class="stage">
     <img class="crest" src="logo.svg" alt="世界奶龙大学校徽">
-    <img class="nailong" id="nl" src="nailong.png" alt="奶龙">
+    <img class="nailong" id="nl" alt="奶龙">
+    <script>
+      // 随机奶龙：原图 + 4 张新图（紧贴 img 执行，首访即随机，避免默认原图先绘制）
+      var pics = ['nailong.png', 'nailong1.png', 'nailong2.png', 'nailong3.png', 'nailong4.png'];
+      document.getElementById('nl').src = pics[Math.floor(Math.random() * pics.length)];
+    </script>
   </div>
   <h1>正在进入世界奶龙大学<span class="dots"></span></h1>
   <p class="sub">WORLD NAILONG UNIVERSITY · EST. 2026</p>
@@ -159,10 +170,6 @@
   </a>
 
 <script>
-  // 随机奶龙：原图 + 4 张新图
-  var pics = ['nailong.png', 'nailong1.png', 'nailong2.png', 'nailong3.png', 'nailong4.png'];
-  document.getElementById('nl').src = pics[Math.floor(Math.random() * pics.length)];
-
   var sec = 5;
   var el = document.getElementById('sec');
   var timer = setInterval(function () {
